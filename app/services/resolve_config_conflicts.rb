@@ -13,6 +13,8 @@ class ResolveConfigConflicts
 
   def call
     @config.reduce({}) do |resolved_config, (linter, options)|
+      return {} unless options
+
       if CONFLICTS.has_key?(linter) && options["enabled"] == true
         resolved_config[CONFLICTS[linter]] = { "enabled" => false }
       end

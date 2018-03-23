@@ -23,5 +23,15 @@ describe ResolveConfigConflicts do
         expect(resolved_config["sass_lint"]).to eq("enabled" => true)
       end
     end
+
+    context "given nil config options" do
+      it "doesn't raise and returns empty Hash" do
+        config = { "sass_lint" => nil }
+
+        resolved_config = ResolveConfigConflicts.call(config)
+
+        expect(resolved_config).to eq({})
+      end
+    end
   end
 end
