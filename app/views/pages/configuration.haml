@@ -6,7 +6,7 @@
       %li
         = link_to "Hound", "#configuration", class: "docs-nav-link"
       %li
-        = link_to "RuboCop", "#ruby", class: "docs-nav-link"
+        = link_to "RuboCop", "#rubocop", class: "docs-nav-link"
       %li
         = link_to "JSHint", "#jshint", class: "docs-nav-link"
       %li
@@ -79,7 +79,7 @@
           scss:
             enabled: false
 
-          ruby:
+          rubocop:
             config_file: .rubocop.yml
 
           jshint:
@@ -105,7 +105,7 @@
         :preserve
           fail_on_violations: true
 
-    %article.docs-article#ruby
+    %article.docs-article#rubocop
       %h2
         RuboCop
         %span.version-number v#{@versions[:rubocop]}
@@ -137,7 +137,7 @@
 
         %code.code-block
           :preserve
-            ruby:
+            rubocop:
               config_file: .rubocop.yml
 
       %p
@@ -146,7 +146,7 @@
 
         %code.code-block
           :preserve
-            ruby:
+            rubocop:
               enabled: false
 
     %article.docs-article#jshint
