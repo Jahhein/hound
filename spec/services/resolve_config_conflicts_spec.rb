@@ -26,7 +26,7 @@ describe ResolveConfigConflicts do
 
     context "given nil config options" do
       it "skips nil options" do
-        config = { "sass_lint" => nil, "eslint" => { "enabled" => true }}
+        config = { "sass_lint" => nil, "eslint" => { "enabled" => true } }
 
         resolved_config = ResolveConfigConflicts.call(config)
 
